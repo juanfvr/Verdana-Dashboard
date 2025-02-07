@@ -9,26 +9,40 @@
     <script type="module" src="./src/js/components/navbar.js"></script>
     <title>Verdana - Início</title>
 </head>
-<body class="w-dvw sm:w-full h-dvh bg-oasis-100 dark:bg-dark-200">
-
-    <header id="navbar" class="fixed top-0 w-full z-20 sm:static shadow-lg sm:shadow-none bg-oasis-100 dark:bg-dark-100 dark:sm:bg-green-100/0 flex justify-between items-center py-4 px-4 sm:pl-4">
-        <h1 class="select-none text-4xl font-black text-green-200 dark:text-green-100"><a href="#">Verdana</a></h1>
-        <nav class="hidden sm:flex fixed top-3 right-0 z-20 bg-green-100/50 dark:bg-green-300/75 border-2 border-r-0 border-green-100/50 rounded-l-xl p-2 pl-4 items-center text-green-300 dark:text-oasis-100 gap-4">
-            <a href="#">Início</a>
-            <a href="#quem-somos    ">Quem somos</a>
-            <a href="#planos">Planos</a>
-            <a href="#" 
-            class="flex flex-row items-center bg-oasis-100 transition-all 
-            hover:scale-105 hover:cursor-pointer dark:bg-dark-100 p-1 pl-2 rounded-full gap-1">
-                <span>Acessar</span>
-                <img class="bg-green-100 w-fit rounded-full" src="./src/assets/icons/keyhole-icon.svg" alt="">
-            </a>  
-        </nav>
-        <nav class="flex sm:hidden">
-
-            <button >
-                <img id="nav-button" src="./src/assets/icons/list-icon.svg" alt="">
+<body class="sm:w-full h-dvh bg-oasis-100 dark:bg-dark-200">
+    <header id="navbar" class="fixed top-0 pb-4 w-full z-20 sm:static py-4 shadow-lg sm:shadow-none bg-oasis-100 dark:bg-dark-100 dark:sm:bg-green-100/0 flex justify-between items-center">
+        <h1 class="select-none text-4xl font-black text-green-200 dark:text-green-100 px-4"><a href="#">Verdana</a></h1>
+        <nav>
+            <div class="hidden sm:flex fixed top-3 right-0 z-20 bg-green-100/50 dark:bg-green-300/75 border-2 border-r-0 border-green-100/50 rounded-l-xl p-2 pl-4 items-center text-green-300 dark:text-oasis-100 gap-4">
+                <a href="#">Início</a>
+                <a href="#quem-somos">Quem somos</a>
+                <a href="#planos">Planos</a>
+                <a href="./src/pages/login.html" target="blank"
+                class="flex flex-row items-center bg-oasis-100 transition-all 
+                hover:scale-105 hover:cursor-pointer dark:bg-dark-100 p-1 pl-2 rounded-full gap-1">
+                    <span>Acessar</span>
+                    <img class="bg-green-100 w-fit rounded-full" src="./src/assets/icons/keyhole-icon.svg" alt="">
+                </a>
+            </div>
+            <button class="flex sm:hidden">
+                <img id="nav-button" class="px-4" src="./src/assets/icons/list-icon.svg" alt="">
             </button>
+            <div class="relative">
+                <div id="nav-sidebar" class="flex items-center flex-col hidden sm:hidden bg-white text-oasis-100 dark:bg-dark-100 h-dvh w-1/2 fixed top-0 right-0">
+                    <div class="w-full flex justify-end p-4">
+                        <button id="close-sidebar" class="">
+                            <img class="" class="text-oasis-100" src="./src/assets/icons/x-icon.svg" alt="">
+                        </button>
+                    </div>
+                    <div id="navSidebar" class="flex flex-col text-center text-xl gap-4">
+                        <a class="nav-item" href="#">Início</a>
+                        <a class="nav-item" href="#quem-somos">Quem somos</a>
+                        <a class="nav-item" href="#planos">Planos</a>
+                        <a class="nav-item" href="./src/pages/login.html" target="blank">Acessar</a>
+                    </div>
+
+                </div>
+            </div>
         </nav>
     </header>
     <main class="mx-2 sm:mx-8">
@@ -37,8 +51,10 @@
                 <div class="flex flex-col items-center gap-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <span class="text-2xl whitespace-nowrap sm:text-4xl select-none font-bold">Monitore, analise, economize</span>
                     <div class="flex flex-col items-center">
-                        <a class="bg-green-100 p-4 rounded-lg text-lg sm:text-xl transition-all hover:scale-110" href="#">Comece a economizar</a>
-                        <a class="underline text-lg" href="#">Já sou cliente</a>
+                        <a class="bg-green-100 p-4 rounded-lg text-lg sm:text-xl transition-all hover:scale-110" href="./src/pages/login.html" target="blank">
+                            Comece a economizar
+                        </a>
+                        <a class="underline text-lg" href="./src/pages/login.html" target="blank">Já sou cliente</a>
                     </div>
                 </div>
                 <img class="w-full h-[280px] sm:h-[524px] rounded-2xl object-cover" src="./src/assets/images/banner-homepage.jpg" alt="">
@@ -82,7 +98,10 @@
                         <li>Alertas de desperdício</li>
                         <li>Suporte via e-mail</li>
                     </ul>
-                    <a class="w-full text-center py-2 rounded-md transition-all hover:scale-105 bg-green-300 dark:bg-green-100" href="#">Adquirir</a>
+                    <a class="w-full text-center py-2 rounded-md transition-all hover:scale-105 bg-green-300 dark:bg-green-100" 
+                    href="./src/pages/login.html" target="blank">
+                        Adquirir
+                    </a>
                 </div>
                 <div class="flex flex-col w-[320px] items-center justify-between gap-8 shadow-xl rounded-xl text-oasis-100 bg-white dark:bg-dark-100 p-4">
                     <div class="flex flex-col items-center">
@@ -95,7 +114,10 @@
                         <li>Suporte prioritário via <br> chat e e-mail</li>
                         <li>+ Tudo do plano básico</li>
                     </ul>
-                    <a class="w-full text-center py-2 rounded-md transition-all hover:scale-105 bg-green-300 dark:bg-green-100" href="#">Adquirir</a>
+                    <a class="w-full text-center py-2 rounded-md transition-all hover:scale-105 bg-green-300 dark:bg-green-100" 
+                    href="./src/pages/login.html" target="blank">
+                    Adquirir
+                    </a>
                 </div>
             </div>
         </section>

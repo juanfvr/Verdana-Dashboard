@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="stylesheet" href="./src/css/tailwind/output.css">
+    <link rel="stylesheet" href="./src/css/tailwind/input.css">
+    <script type="module" src="./src/js/components/navbar.js"></script>
+    <title>Verdana - Início</title>
+</head>
+<body class="w-dvw sm:w-full h-dvh bg-oasis-100 dark:bg-dark-200">
+
+    <header id="navbar" class="fixed top-0 w-full z-20 sm:static shadow-lg sm:shadow-none bg-oasis-100 dark:bg-dark-100 dark:sm:bg-green-100/0 flex justify-between items-center py-4 px-4 sm:pl-4">
+        <h1 class="select-none text-4xl font-black text-green-200 dark:text-green-100"><a href="#">Verdana</a></h1>
+        <nav class="hidden sm:flex fixed top-3 right-0 z-20 bg-green-100/50 dark:bg-green-300/75 border-2 border-r-0 border-green-100/50 rounded-l-xl p-2 pl-4 items-center text-green-300 dark:text-oasis-100 gap-4">
+            <a href="#">Início</a>
+            <a href="#quem-somos    ">Quem somos</a>
+            <a href="#planos">Planos</a>
+            <a href="#" 
+            class="flex flex-row items-center bg-oasis-100 transition-all 
+            hover:scale-105 hover:cursor-pointer dark:bg-dark-100 p-1 pl-2 rounded-full gap-1">
+                <span>Acessar</span>
+                <img class="bg-green-100 w-fit rounded-full" src="./src/assets/icons/keyhole-icon.svg" alt="">
+            </a>  
+        </nav>
+        <nav class="flex sm:hidden">
+
+            <button >
+                <img id="nav-button" src="./src/assets/icons/list-icon.svg" alt="">
+            </button>
+        </nav>
+    </header>
+    <main class="mx-2 sm:mx-8">
+        <section id="hero" class="text-oasis-100 mt-24 sm:mt-4">
+            <div class="relative">
+                <div class="flex flex-col items-center gap-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <span class="text-2xl whitespace-nowrap sm:text-4xl select-none font-bold">Monitore, analise, economize</span>
+                    <div class="flex flex-col items-center">
+                        <a class="bg-green-100 p-4 rounded-lg text-lg sm:text-xl transition-all hover:scale-110" href="#">Comece a economizar</a>
+                        <a class="underline text-lg" href="#">Já sou cliente</a>
+                    </div>
+                </div>
+                <img class="w-full h-[280px] sm:h-[524px] rounded-2xl object-cover" src="./src/assets/images/banner-homepage.jpg" alt="">
+            </div>
+        </section>
+        <section id="quem-somos" class="flex flex-col items-center select-none my-12 text-green-300 dark:text-oasis-100">
+            <h2 class="text-2xl sm:text-4xl font-bold text-green-200 dark:text-green-100">Quem somos</h2>
+            <div class="flex justify-around flex-col sm:flex-row gap-8 sm:gap-12 mt-3 mx-4 sm:mx-24">
+                <p class="text-lg text-justify">
+                    Muitas empresas enfrentam dificuldades para monitorar e 
+                    analisar o consumo energético, soluções disponíveis no 
+                    mercado são complexas e caras, dificultando na 
+                    identificação de padrão de consumo e desperdícios.
+                    A Verdana nasceu para suprir essa demanda!
+                </p>
+                <p class="text-lg text-justify">
+                    Com gráficos interativos e relatórios personalizados, 
+                    nossa plataforma permite que empresas monitorem o consumo 
+                    em tempo real, identifiquem tendências e tomem decisões 
+                    estratégicas para reduzir custos e melhorar a eficiência energética.
+                </p>
+            </div>
+        </section>
+        <section class="flex gap-2 flex-col items-center my-12 select-none">
+            <h2 class="text-2xl sm:text-4xl font-bold text-green-200 dark:text-green-100 text-center">O que nos diferencia</h2>
+            <div class="w-full p-4 text-md sm:text-lg shadow-md text-center rounded-lg text-green-300 dark:text-oasis-100 bg-green-100/15">Redução de custos operacionais: Identifique oportunidades de economia com dados e insights precisos.</div>
+            <div class="w-full p-4 text-md sm:text-lg shadow-md text-center rounded-lg text-green-300 dark:text-oasis-100 bg-green-100/15">Facilidade de uso: Interface intuitiva, sem necessidade de conhecimento técnico avançado.</div>
+            <div class="w-full p-4 text-md sm:text-lg shadow-md text-center rounded-lg text-green-300 dark:text-oasis-100 bg-green-100/15">Monitoramento em tempo real: Acompanhe o consumo energético continuamente com alertas para desvios.</div>
+        </section>
+        <section id="planos" class="flex flex-col gap-4 items-center my-12">
+            <h2 class="text-2xl sm:text-4xl font-bold text-green-200 dark:text-green-100 text-center">Conheça nossos planos</h2>
+            <div class="flex flex-wrap gap-4 sm:gap-24 justify-around">
+                <div class="flex flex-col w-[320px] items-center justify-between gap-8 shadow-xl rounded-xl text-oasis-100 bg-white dark:bg-dark-100 p-4">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl text-green-300 dark:text-oasis-100 font-bold">Básico</span>
+                        <span class="text-green-100">R$<span class="text-4xl font-bold text-green-100">98</span>,99</span>
+                    </div>
+                    <ul class="text-start text-lg text-green-300 dark:text-oasis-100 list-disc px-6">
+                        <li>Monitoramento em tempo real</li>
+                        <li>Relatórios básicos de consumo</li>
+                        <li>Alertas de desperdício</li>
+                        <li>Suporte via e-mail</li>
+                    </ul>
+                    <a class="w-full text-center py-2 rounded-md transition-all hover:scale-105 bg-green-300 dark:bg-green-100" href="#">Adquirir</a>
+                </div>
+                <div class="flex flex-col w-[320px] items-center justify-between gap-8 shadow-xl rounded-xl text-oasis-100 bg-white dark:bg-dark-100 p-4">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl text-green-300 dark:text-oasis-100 font-bold">Avançado</span>
+                        <span class="text-green-100">R$<span class="text-4xl font-bold text-green-100">220</span>,00</span>
+                    </div>
+                    <ul class="text-start text-lg text-green-300 dark:text-oasis-100 list-disc px-6">
+                        <li>Relatórios personalizados <br> e exportáveis</li>
+                        <li>Integração com sistemas externos</li>
+                        <li>Suporte prioritário via <br> chat e e-mail</li>
+                        <li>+ Tudo do plano básico</li>
+                    </ul>
+                    <a class="w-full text-center py-2 rounded-md transition-all hover:scale-105 bg-green-300 dark:bg-green-100" href="#">Adquirir</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-green-300 dark:bg-dark-100 py-8">
+
+        <ul class="flex justify-center gap-2 text-oasis-100">
+            <span>Redes Sociais:</span>
+            <li class="underline">
+                <a href="https://www.github.com/juanfvr" target="_blank">GitHub</a>
+            </li>
+            <span>|</span>
+            <li class="underline">
+                <a href="https://www.behance.net/juanferreira28" target="_blank">Behance</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

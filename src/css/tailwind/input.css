@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* npx @tailwindcss/cli -i ./src/css/tailwind/input.css -o ./src/css/tailwind/output.css --watch */
+@font-face {
+    font-family: "Nordic Geo";
+    src: url(/src/assets/fonts/nordic-geo-regular.otf);
+}
+
+body {
+    font-family: "Nordic Geo";
+}
+
+@theme {
+    --color-oasis-100: #F1FDFF;
+    --color-green-100: #24E024;
+    --color-green-200: #134E13;
+    --color-green-300: #0B2D0B;
+    --color-dark-100: #111827;
+    --color-dark-200: #030712;
+    --color-yellow-100: #FFC300;
+    --color-yellow-200: #BF9200;
+    --color-blue-100: #0095FF;
+    --color-red-100: #FF0022;
+}

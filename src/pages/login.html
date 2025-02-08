@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="../css/tailwind/output.css" />
+    <link rel="stylesheet" href="../css/tailwind/input.css" />
+    <title>Verdana - Login</title>
+  </head>
+  <body class="h-dvh bg-oasis-100 dark:bg-dark-200">
+    <div class="flex h-full w-full justify-between">
+      <div class="flex flex-col flex-1">
+        <div class="p-4">
+          <h1
+            class="dark:text-green-100 text-green-300 text-4xl font-bold select-none"
+          >
+            Área de login
+          </h1>
+        </div>
+        <div class="flex justify-center items-center h-full">
+          <div
+            class="flex flex-col bg-white dark:bg-dark-100 rounded-lg shadow-lg w-96 h-fit gap-4 p-4"
+          >
+            <h2
+              class="text-2xl text-green-300 dark:text-oasis-100 font-bol select-none"
+            >
+              Insira suas informações
+            </h2>
+            <div>
+              <label class="flex flex-col">
+                <span
+                  class="text-green-300 dark:text-oasis-100 text-xl select-none">
+                  Endereço de e-mail</span
+                >
+                <input
+                  autocomplete="false"
+                  class="border-2 border-green-100 text-green-300 dark:text-oasis-100 outline-none p-2 rounded-lg"
+                  placeholder="exemplo@abc.com"
+                  type="text"
+                  name=""
+                  id=""
+                />
+              </label>
+              <label class="flex flex-col">
+                <span
+                  class="text-green-300 dark:text-oasis-100 text-xl select-none"
+                  >Senha</span
+                >
+                <input
+                  autocomplete="false"
+                  class="border-2 border-green-100 text-green-300 dark:text-oasis-100 outline-none p-2 rounded-lg"
+                  placeholder="abc1234@"
+                  type="password"
+                  name=""
+                  id=""
+                  />
+              </label>
+              <a href="./dashboard.html" target="_blank">
+                <button
+                  class="bg-green-300 dark:bg-green-100 text-oasis-100 dark:text-dark-200 font-bold text-lg w-full mt-4 p-3 rounded-lg"
+                  >
+                  Fazer login
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1 hidden sm:block">
+        <img
+          class="h-full w-full object-cover select-none"
+          src="../assets/images/banner-login.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

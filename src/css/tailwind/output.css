@@ -731,9 +731,6 @@
   .mx-8 {
     margin-inline: calc(var(--spacing) * 8);
   }
-  .mx-24 {
-    margin-inline: calc(var(--spacing) * 24);
-  }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
   }
@@ -746,14 +743,17 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
-  }
-  .mt-12 {
-    margin-top: calc(var(--spacing) * 12);
-  }
   .mt-24 {
     margin-top: calc(var(--spacing) * 24);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
   }
   .box-border {
     box-sizing: border-box;
@@ -842,11 +842,20 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
+  }
   .h-\[280px\] {
     height: 280px;
   }
   .h-dvh {
     height: 100dvh;
+  }
+  .h-fit {
+    height: fit-content;
+  }
+  .h-full {
+    height: 100%;
   }
   .h-screen {
     height: 100vh;
@@ -866,11 +875,29 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-48 {
+    width: calc(var(--spacing) * 48);
+  }
+  .w-52 {
+    width: calc(var(--spacing) * 52);
+  }
+  .w-64 {
+    width: calc(var(--spacing) * 64);
+  }
+  .w-72 {
+    width: calc(var(--spacing) * 72);
+  }
+  .w-96 {
+    width: calc(var(--spacing) * 96);
+  }
+  .w-\[284\] {
+    width: 284;
+  }
+  .w-\[284px\] {
+    width: 284px;
+  }
   .w-\[320px\] {
     width: 320px;
-  }
-  .w-dvw {
-    width: 100dvw;
   }
   .w-fit {
     width: fit-content;
@@ -889,6 +916,9 @@
   }
   .min-w-screen {
     min-width: 100vw;
+  }
+  .flex-1 {
+    flex: 1;
   }
   .flex-auto {
     flex: auto;
@@ -1053,9 +1083,6 @@
   .snap-none {
     scroll-snap-type: none;
   }
-  .snap-y {
-    scroll-snap-type: y var(--tw-scroll-snap-strictness);
-  }
   .snap-mandatory {
     --tw-scroll-snap-strictness: mandatory;
   }
@@ -1079,9 +1106,6 @@
   }
   .snap-normal {
     scroll-snap-stop: normal;
-  }
-  .scroll-p-4 {
-    scroll-padding: calc(var(--spacing) * 4);
   }
   .list-inside {
     list-style-position: inside;
@@ -1310,9 +1334,6 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -1570,6 +1591,15 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-blue-100 {
+    background-color: var(--color-blue-100);
+  }
+  .bg-blue-100\/50 {
+    background-color: color-mix(in oklab, var(--color-blue-100) 50%, transparent);
+  }
+  .bg-blue-100\/75 {
+    background-color: color-mix(in oklab, var(--color-blue-100) 75%, transparent);
+  }
   .bg-green-100 {
     background-color: var(--color-green-100);
   }
@@ -1581,6 +1611,9 @@
   }
   .bg-green-300 {
     background-color: var(--color-green-300);
+  }
+  .bg-green-300\/50 {
+    background-color: color-mix(in oklab, var(--color-green-300) 50%, transparent);
   }
   .bg-oasis-100 {
     background-color: var(--color-oasis-100);
@@ -1769,8 +1802,17 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -1778,8 +1820,8 @@
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
-  .px-12 {
-    padding-inline: calc(var(--spacing) * 12);
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -1792,6 +1834,9 @@
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pb-8 {
+    padding-bottom: calc(var(--spacing) * 8);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -1845,6 +1890,10 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -1853,17 +1902,9 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
   }
   .leading-none {
     --tw-leading: 1;
@@ -1950,6 +1991,12 @@
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
   }
+  .text-blue-100 {
+    color: var(--color-blue-100);
+  }
+  .text-blue-400 {
+    color: var(--color-blue-400);
+  }
   .text-green-100 {
     color: var(--color-green-100);
   }
@@ -1959,8 +2006,23 @@
   .text-green-300 {
     color: var(--color-green-300);
   }
+  .text-green-300\/50 {
+    color: color-mix(in oklab, var(--color-green-300) 50%, transparent);
+  }
+  .text-green-300\/70 {
+    color: color-mix(in oklab, var(--color-green-300) 70%, transparent);
+  }
+  .text-green-300\/75 {
+    color: color-mix(in oklab, var(--color-green-300) 75%, transparent);
+  }
   .text-oasis-100 {
     color: var(--color-oasis-100);
+  }
+  .text-oasis-100\/25 {
+    color: color-mix(in oklab, var(--color-oasis-100) 25%, transparent);
+  }
+  .text-oasis-100\/50 {
+    color: color-mix(in oklab, var(--color-oasis-100) 50%, transparent);
   }
   .capitalize {
     text-transform: capitalize;
@@ -2448,9 +2510,21 @@
       }
     }
   }
+  .hover\:text-green-200 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-green-200);
+      }
+    }
+  }
   .sm\:static {
     @media (width >= 40rem) {
       position: static;
+    }
+  }
+  .sm\:mx-0 {
+    @media (width >= 40rem) {
+      margin-inline: calc(var(--spacing) * 0);
     }
   }
   .sm\:mx-8 {
@@ -2468,6 +2542,11 @@
       margin-top: calc(var(--spacing) * 4);
     }
   }
+  .sm\:block {
+    @media (width >= 40rem) {
+      display: block;
+    }
+  }
   .sm\:flex {
     @media (width >= 40rem) {
       display: flex;
@@ -2483,9 +2562,9 @@
       height: 524px;
     }
   }
-  .sm\:w-1\/2 {
+  .sm\:w-96 {
     @media (width >= 40rem) {
-      width: calc(1/2 * 100%);
+      width: calc(var(--spacing) * 96);
     }
   }
   .sm\:w-full {
@@ -2498,11 +2577,6 @@
       flex-direction: row;
     }
   }
-  .sm\:gap-0 {
-    @media (width >= 40rem) {
-      gap: calc(var(--spacing) * 0);
-    }
-  }
   .sm\:gap-12 {
     @media (width >= 40rem) {
       gap: calc(var(--spacing) * 12);
@@ -2511,36 +2585,6 @@
   .sm\:gap-24 {
     @media (width >= 40rem) {
       gap: calc(var(--spacing) * 24);
-    }
-  }
-  .sm\:bg-green-100\/0 {
-    @media (width >= 40rem) {
-      background-color: color-mix(in oklab, var(--color-green-100) 0%, transparent);
-    }
-  }
-  .sm\:bg-white\/0 {
-    @media (width >= 40rem) {
-      background-color: color-mix(in oklab, var(--color-white) 0%, transparent);
-    }
-  }
-  .sm\:bg-auto {
-    @media (width >= 40rem) {
-      background-size: auto;
-    }
-  }
-  .sm\:px-12 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 12);
-    }
-  }
-  .sm\:px-32 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 32);
-    }
-  }
-  .sm\:pl-4 {
-    @media (width >= 40rem) {
-      padding-left: calc(var(--spacing) * 4);
     }
   }
   .sm\:text-4xl {
@@ -2567,11 +2611,6 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
-  .md\:px-32 {
-    @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 32);
-    }
-  }
   .dark\:bg-dark-100 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-dark-100);
@@ -2582,9 +2621,24 @@
       background-color: var(--color-dark-200);
     }
   }
+  .dark\:bg-dark-200\/50 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in oklab, var(--color-dark-200) 50%, transparent);
+    }
+  }
+  .dark\:bg-dark-200\/75 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in oklab, var(--color-dark-200) 75%, transparent);
+    }
+  }
   .dark\:bg-green-100 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-green-100);
+    }
+  }
+  .dark\:bg-green-300\/50 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in oklab, var(--color-green-300) 50%, transparent);
     }
   }
   .dark\:bg-green-300\/75 {
@@ -2592,9 +2646,29 @@
       background-color: color-mix(in oklab, var(--color-green-300) 75%, transparent);
     }
   }
+  .dark\:text-dark-200 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-dark-200);
+    }
+  }
   .dark\:text-green-100 {
     @media (prefers-color-scheme: dark) {
       color: var(--color-green-100);
+    }
+  }
+  .dark\:text-green-200 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-green-200);
+    }
+  }
+  .dark\:text-green-300 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-green-300);
+    }
+  }
+  .dark\:text-green-300\/50 {
+    @media (prefers-color-scheme: dark) {
+      color: color-mix(in oklab, var(--color-green-300) 50%, transparent);
     }
   }
   .dark\:text-oasis-100 {
@@ -2602,16 +2676,23 @@
       color: var(--color-oasis-100);
     }
   }
-  .dark\:sm\:bg-green-100\/0 {
+  .dark\:text-oasis-100\/50 {
     @media (prefers-color-scheme: dark) {
-      @media (width >= 40rem) {
-        background-color: color-mix(in oklab, var(--color-green-100) 0%, transparent);
+      color: color-mix(in oklab, var(--color-oasis-100) 50%, transparent);
+    }
+  }
+  .hover\:dark\:text-green-100 {
+    &:hover {
+      @media (hover: hover) {
+        @media (prefers-color-scheme: dark) {
+          color: var(--color-green-100);
+        }
       }
     }
   }
-  .sm\:dark\:bg-green-100\/0 {
-    @media (width >= 40rem) {
-      @media (prefers-color-scheme: dark) {
+  .dark\:sm\:bg-green-100\/0 {
+    @media (prefers-color-scheme: dark) {
+      @media (width >= 40rem) {
         background-color: color-mix(in oklab, var(--color-green-100) 0%, transparent);
       }
     }

@@ -590,9 +590,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -601,9 +598,6 @@
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
-  }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -728,9 +722,6 @@
   .mx-4 {
     margin-inline: calc(var(--spacing) * 4);
   }
-  .mx-8 {
-    margin-inline: calc(var(--spacing) * 8);
-  }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
   }
@@ -745,15 +736,6 @@
   }
   .mt-24 {
     margin-top: calc(var(--spacing) * 24);
-  }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
-  .mb-8 {
-    margin-bottom: calc(var(--spacing) * 8);
   }
   .box-border {
     box-sizing: border-box;
@@ -842,9 +824,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-96 {
-    height: calc(var(--spacing) * 96);
-  }
   .h-\[280px\] {
     height: 280px;
   }
@@ -869,32 +848,14 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-48 {
-    width: calc(var(--spacing) * 48);
-  }
-  .w-52 {
-    width: calc(var(--spacing) * 52);
   }
   .w-64 {
     width: calc(var(--spacing) * 64);
   }
-  .w-72 {
-    width: calc(var(--spacing) * 72);
-  }
   .w-96 {
     width: calc(var(--spacing) * 96);
-  }
-  .w-\[284\] {
-    width: 284;
-  }
-  .w-\[284px\] {
-    width: 284px;
   }
   .w-\[320px\] {
     width: 320px;
@@ -1002,16 +963,8 @@
     --tw-translate-y: 100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -1591,15 +1544,6 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-blue-100 {
-    background-color: var(--color-blue-100);
-  }
-  .bg-blue-100\/50 {
-    background-color: color-mix(in oklab, var(--color-blue-100) 50%, transparent);
-  }
-  .bg-blue-100\/75 {
-    background-color: color-mix(in oklab, var(--color-blue-100) 75%, transparent);
-  }
   .bg-green-100 {
     background-color: var(--color-green-100);
   }
@@ -1611,9 +1555,6 @@
   }
   .bg-green-300 {
     background-color: var(--color-green-300);
-  }
-  .bg-green-300\/50 {
-    background-color: color-mix(in oklab, var(--color-green-300) 50%, transparent);
   }
   .bg-oasis-100 {
     background-color: var(--color-oasis-100);
@@ -1808,9 +1749,6 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
-  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -1834,9 +1772,6 @@
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
-  }
-  .pb-8 {
-    padding-bottom: calc(var(--spacing) * 8);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -1991,12 +1926,6 @@
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
   }
-  .text-blue-100 {
-    color: var(--color-blue-100);
-  }
-  .text-blue-400 {
-    color: var(--color-blue-400);
-  }
   .text-green-100 {
     color: var(--color-green-100);
   }
@@ -2006,23 +1935,11 @@
   .text-green-300 {
     color: var(--color-green-300);
   }
-  .text-green-300\/50 {
-    color: color-mix(in oklab, var(--color-green-300) 50%, transparent);
-  }
-  .text-green-300\/70 {
-    color: color-mix(in oklab, var(--color-green-300) 70%, transparent);
-  }
   .text-green-300\/75 {
     color: color-mix(in oklab, var(--color-green-300) 75%, transparent);
   }
   .text-oasis-100 {
     color: var(--color-oasis-100);
-  }
-  .text-oasis-100\/25 {
-    color: color-mix(in oklab, var(--color-oasis-100) 25%, transparent);
-  }
-  .text-oasis-100\/50 {
-    color: color-mix(in oklab, var(--color-oasis-100) 50%, transparent);
   }
   .capitalize {
     text-transform: capitalize;
@@ -2522,11 +2439,6 @@
       position: static;
     }
   }
-  .sm\:mx-0 {
-    @media (width >= 40rem) {
-      margin-inline: calc(var(--spacing) * 0);
-    }
-  }
   .sm\:mx-8 {
     @media (width >= 40rem) {
       margin-inline: calc(var(--spacing) * 8);
@@ -2560,11 +2472,6 @@
   .sm\:h-\[524px\] {
     @media (width >= 40rem) {
       height: 524px;
-    }
-  }
-  .sm\:w-96 {
-    @media (width >= 40rem) {
-      width: calc(var(--spacing) * 96);
     }
   }
   .sm\:w-full {
@@ -2621,11 +2528,6 @@
       background-color: var(--color-dark-200);
     }
   }
-  .dark\:bg-dark-200\/50 {
-    @media (prefers-color-scheme: dark) {
-      background-color: color-mix(in oklab, var(--color-dark-200) 50%, transparent);
-    }
-  }
   .dark\:bg-dark-200\/75 {
     @media (prefers-color-scheme: dark) {
       background-color: color-mix(in oklab, var(--color-dark-200) 75%, transparent);
@@ -2634,11 +2536,6 @@
   .dark\:bg-green-100 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-green-100);
-    }
-  }
-  .dark\:bg-green-300\/50 {
-    @media (prefers-color-scheme: dark) {
-      background-color: color-mix(in oklab, var(--color-green-300) 50%, transparent);
     }
   }
   .dark\:bg-green-300\/75 {
@@ -2654,21 +2551,6 @@
   .dark\:text-green-100 {
     @media (prefers-color-scheme: dark) {
       color: var(--color-green-100);
-    }
-  }
-  .dark\:text-green-200 {
-    @media (prefers-color-scheme: dark) {
-      color: var(--color-green-200);
-    }
-  }
-  .dark\:text-green-300 {
-    @media (prefers-color-scheme: dark) {
-      color: var(--color-green-300);
-    }
-  }
-  .dark\:text-green-300\/50 {
-    @media (prefers-color-scheme: dark) {
-      color: color-mix(in oklab, var(--color-green-300) 50%, transparent);
     }
   }
   .dark\:text-oasis-100 {

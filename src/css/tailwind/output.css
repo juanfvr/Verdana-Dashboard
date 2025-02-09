@@ -593,6 +593,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -604,6 +607,9 @@
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
+  }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -899,6 +905,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -1011,8 +1020,16 @@
     --tw-translate-y: 100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .-translate-x-1 {
+    --tw-translate-x: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -1588,6 +1605,9 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-dark-200 {
+    border-color: var(--color-dark-200);
+  }
   .border-dark-200\/50 {
     border-color: color-mix(in oklab, var(--color-dark-200) 50%, transparent);
   }
@@ -1612,6 +1632,9 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-blue-100 {
+    background-color: var(--color-blue-100);
+  }
   .bg-blue-100\/25 {
     background-color: color-mix(in oklab, var(--color-blue-100) 25%, transparent);
   }
@@ -1633,6 +1656,9 @@
   .bg-oasis-100 {
     background-color: var(--color-oasis-100);
   }
+  .bg-red-100 {
+    background-color: var(--color-red-100);
+  }
   .bg-red-100\/25 {
     background-color: color-mix(in oklab, var(--color-red-100) 25%, transparent);
   }
@@ -1647,6 +1673,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-yellow-100 {
+    background-color: var(--color-yellow-100);
   }
   .bg-yellow-100\/25 {
     background-color: color-mix(in oklab, var(--color-yellow-100) 25%, transparent);
@@ -2659,6 +2688,16 @@
   .md\:gap-4 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 4);
+    }
+  }
+  .lg\:my-3 {
+    @media (width >= 64rem) {
+      margin-block: calc(var(--spacing) * 3);
+    }
+  }
+  .lg\:my-4 {
+    @media (width >= 64rem) {
+      margin-block: calc(var(--spacing) * 4);
     }
   }
   .lg\:my-6 {

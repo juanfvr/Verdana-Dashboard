@@ -1,37 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/favicon.png">
-    <link rel="stylesheet" href="/src/css/tailwind/input.css">
-    <link rel="stylesheet" href="/src/css/tailwind/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.png" />
+    <script type="module" src="/src/js/components/dashboard/navbar.js"></script>
+    <script type="module" src="/src/js/components/dashboard/custosMensais.js"></script>
+    <script type="module" src="/src/js/components/dashboard/chartBar.js"></script>
+    <script type="module" src="/src/js/components/dashboard/chartPie.js"></script>
+    <script type="module" src="/src/js/components/dashboard/chartLine.js"></script>
+    <link rel="stylesheet" href="/src/css/tailwind/input.css" />
+    <link rel="stylesheet" href="/src/css/tailwind/output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Verdana - Dashboar</title>
-</head>
-<body class="h-dvh bg-oasis-100 dark:bg-dark-200">
-    <aside class="flex flex-col justify-between h-full w-64 bg-white dark:bg-dark-100 p-4">
+  </head>
+  <body class="flex h-dvh bg-oasis-100 dark:bg-dark-200">
+    <header class="w-fit">
+      <aside
+        class="hidden md:flex flex-col justify-between h-dvh w-64 bg-white dark:bg-dark-100 p-4"
+      >
         <div class="text-oasis-100">
-            <div class="select-none">
-                <h1 class="text-3xl font-bold text-green-300 dark:text-green-100">Verdana Dashboard's</h1>
-                <span class="text-green-300/75 dark:text-oasis-100/50">Análise</span>
-            </div>
-            <div class="flex flex-col gap-2 mt-4 text-lg">
-                <a class="bg-green-100/50 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200" href="#">Dashboard</a>
-                <a class="bg-green-100/50 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200" href="#">Alterar dados</a>
-                <a class="bg-green-100/50 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200" href="#">Importar dados</a>
-                <a class="bg-green-100/50 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200" href="#">Exportar dados</a>
-            </div>
+          <div class="select-none">
+            <h1 class="text-3xl font-bold text-green-200 dark:text-green-100">
+              Verdana Dashboard's
+            </h1>
+            <span class="text-green-300/75 dark:text-oasis-100/50"
+              >Análise</span
+            >
+          </div>
+          <div id="navLinks" class="flex flex-col gap-2 mt-4 text-lg">
+            <a
+              class="text-green-300 dark:text-oasis-100 bg-green-100/25 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200"
+              href="#"
+              >Dashboard</a
+            >
+            <a
+              class="text-green-300 dark:text-oasis-100 bg-green-100/25 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200"
+              href="#"
+              >Alterar dados</a
+            >
+            <a
+              class="text-green-300 dark:text-oasis-100 bg-green-100/25 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200"
+              href="#"
+              >Importar dados</a
+            >
+            <a
+              class="text-green-300 dark:text-oasis-100 bg-green-100/25 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200"
+              href="#"
+              >Exportar dados</a
+            >
+          </div>
         </div>
         <div class="text-oasis-100">
-            <div class="pb-4 select-none">
-                <span class="text-green-300 dark:text-oasis-100">Plano:</span>
-                <span class="bg-green-100/50 dark:bg-green-300/75 p-1 rounded-lg text-green-300 dark:text-green-100">Avançado</span>
+          <div class="pb-4 select-none">
+            <span class="text-green-300 dark:text-oasis-100">Plano:</span>
+            <span
+              class="bg-green-100/25 dark:bg-green-300/75 p-1 rounded-lg text-green-300 dark:text-green-100"
+              >Avançado</span
+            >
+          </div>
+          <div id="navLinks" class="flex flex-col my-4 gap-2 text-lg">
+            <a
+              class="text-green-300 dark:text-oasis-100 bg-green-100/25 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200"
+              href="#"
+              >Preferências</a
+            >
+            <a
+              class="text-green-300 dark:text-oasis-100 bg-green-100/25 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200"
+              href="#"
+              >Suporte</a
+            >
+          </div>
+        </div>
+      </aside>
+      <nav
+        class="flex fixed z-20 w-full justify-between items-center bg-white dark:bg-dark-100 text-oasis-100 p-4"
+      >
+        <div class="">
+          <h1 class="text-3xl font-bold text-green-300 dark:text-green-100">
+            Verdana
+          </h1>
+        </div>
+        <div>
+          <span class="text-green-300 dark:text-oasis-100">Plano:</span>
+          <span
+            class="bg-green-100/50 dark:bg-green-300/75 p-1 rounded-lg text-green-300 dark:text-green-100"
+            >Avançado</span
+          >
+        </div>
+        <div>
+          <a id="nav-button" href="">
+            <img src="/src/assets/icons/list-icon.svg" alt="" />
+          </a>
+        </div>
+      </nav>
+      <div
+        id="navbar-hamburger"
+        class="hidden lg:hidden z-10 fixed flex-col bg-white dark:bg-dark-100 text-oasis-100 top-18 w-full"
+      >
+        <div class="flex flex-col gap-4 p-4 text-center text-xl">
+          <div class="border-b-2 border-dark-200/50 text-green-200 dark:text-oasis-100">
+            <a href=""></a>Dashboard
+          </div>
+          <div class="border-b-2 border-dark-200/50 text-green-200 dark:text-oasis-100">
+            <a href=""></a>Alterar dados
+          </div>
+          <div class="border-b-2 border-dark-200/50 text-green-200 dark:text-oasis-100">
+            <a href=""></a>Importar dados
+          </div>
+          <div class="border-b-2 border-dark-200/50 text-green-200 dark:text-oasis-100">
+            <a href=""></a>Exportar dados
+          </div>
+          <div class="border-b-2 border-dark-200/50 text-green-200 dark:text-oasis-100">
+            <a href=""></a>Preferências
+          </div>
+          <div class="border-b-2 border-dark-200/50 text-green-200 dark:text-oasis-100">
+            <a href=""></a>Suporte
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex flex-col m-4 md:flex-row md:gap-4 my-16 md:my-0 w-full">
+      <section class="flex flex-col w-full md:w-fit h-fit sm:h-full">
+        <div
+          class="bg-white dark:bg-dark-100 rounded-xl shadow-md md:w-96 h-fit p-4 mt-4"
+        >
+          <form>
+            <div class="flex flex-col gap-2">
+              <h2
+                class="text-xl sm:text-2xl font-bold text-green-200 dark:text-green-100 select-none"
+              >
+                Custos mensais
+              </h2>
+              <label for="" class="flex flex-col">
+                <span
+                  class="sm:text-sm text-green-300 dark:text-oasis-100 font-bold select-none"
+                  >Última leitura (kW)</span
+                >
+                <div
+                id="energiaMensal"
+                  class="border-2 border-green-100 rounded-lg font-bold text-green-200 dark:text-green-100 p-2 select-none"
+                >
+                  10480
+                </div>
+              </label>
+              <label for="" class="flex flex-col">
+                <span
+                  class="text-green-300 dark:text-oasis-100 font-bold select-none"
+                  >Tarifa (R$/kWh)</span
+                >
+                <input
+                id="custosInput"
+                  class="text-green-200 dark:text-oasis-100 font-bold border-2 outline-none border-green-100 rounded-lg p-2"
+                  type="number"
+                />
+              </label>
+              <button
+              id="btn-calcular"
+                class="bg-green-100 p-2 font-bold text-lg rounded-lg transition-all hover:scale-105 select-none"
+              >
+                Calcular
+              </button>
+              <span
+                id="custos-totais"
+                class="font-bold text-xl text-oasis text-green-300 dark:text-oasis-100 select-none"
+                >Total:
+              </span>
             </div>
-            <div class="flex flex-col my-4 gap-2 text-lg">
-                <a class="bg-green-100/50 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200" href="#">Preferências</a>
-                <a class="bg-green-100/50 dark:bg-dark-200/75 px-2 py-1 rounded-lg shadow-lg transition-all hover:scale-110 hover:dark:text-green-100 hover:text-green-200" href="#">Suporte</a>
+          </form>
+        </div>
+        <div
+          class="bg-white dark:bg-dark-100 rounded-xl shadow-md lg:w-96 h-96 mlg:h-fit overflow-scroll overflow-x-auto mt-4 lg:my-6"
+        >
+          <div
+            class="sticky z-10 top-0 rounded-xl bg-white dark:bg-dark-100 p-4 rounded-b-md"
+          >
+            <h2
+              class="text-xl sm:text-2xl font-bold text-green-200 dark:text-green-100 select-none"
+            >
+              Dispositivos conectados
+            </h2>
+            <div class="flex justify-between">
+              <p class="text-green-300 dark:text-oasis-100 font-bold">
+                Consumo:
+                <span class="text-green-200 dark:text-green-100"
+                  >1284 kW/h</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 text-xs sm:text-sm px-4 pb-4">
+            <div
+              class="flex justify-between items-center bg-oasis-100 dark:bg-dark-200 p-2 rounded-lg shadow-md"
+            >
+              <span class="font-bold text-green-300 dark:text-oasis-100"
+                >Lâmpada LED</span
+              >
+              <span
+                class="bg-blue-100/25 text-blue-100 font-semibold p-1 px-2 rounded-full"
+                >200kW</span
+              >
+              <span
+                class="bg-green-100/25 text-green-300 font-semibold dark:text-green-100 p-1 px-2 rounded-full"
+                >Consumo baixo</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center bg-oasis-100 dark:bg-dark-200 p-2 rounded-lg shadow-md"
+            >
+              <span class="font-bold text-green-300 dark:text-oasis-100"
+                >Monitor LCD</span
+              >
+              <span
+                class="bg-blue-100/25 text-blue-100 font-semibold p-1 px-2 rounded-full"
+                >140kW</span
+              >
+              <span
+                class="bg-green-100/25 text-green-300 font-semibold dark:text-green-100 p-1 px-2 rounded-full"
+                >Consumo baixo</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center bg-oasis-100 dark:bg-dark-200 p-2 rounded-lg shadow-md"
+            >
+              <span class="font-bold text-green-300 dark:text-oasis-100"
+                >Computador</span
+              >
+              <span
+                class="bg-blue-100/25 text-blue-100 font-semibold p-1 px-2 rounded-full"
+                >225kW</span
+              >
+              <span
+                class="bg-yellow-100/25 text-green-300 font-semibold dark:text-yellow-200 p-1 px-2 rounded-full"
+                >Consumo médio</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center bg-oasis-100 dark:bg-dark-200 p-2 rounded-lg shadow-md"
+            >
+              <span class="font-bold text-green-300 dark:text-oasis-100"
+                >Ar-condicionado</span
+              >
+              <span
+                class="bg-blue-100/25 text-blue-100 font-semibold p-1 px-2 rounded-full"
+                >400kW</span
+              >
+              <span
+                class="bg-red-100/25 text-red-100 font-semibold dark:text-red-100 p-1 px-2 rounded-full"
+                >Consumo alto</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center bg-oasis-100 dark:bg-dark-200 p-2 rounded-lg shadow-md"
+            >
+              <span class="font-bold text-green-300 dark:text-oasis-100"
+                >Geladeira Indust.</span
+              >
+              <span
+                class="bg-blue-100/25 text-blue-100 font-semibold p-1 px-2 rounded-full"
+                >250kW</span
+              >
+              <span
+                class="bg-red-100/25 text-red-100 font-semibold dark:text-red-100 p-1 px-2 rounded-full"
+                >Consumo alto</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center bg-oasis-100 dark:bg-dark-200 p-2 rounded-lg shadow-md"
+            >
+              <span class="font-bold text-green-300 dark:text-oasis-100"
+                >Smart TV</span
+              >
+              <span
+                class="bg-blue-100/25 text-blue-100 font-semibold p-1 px-2 rounded-full"
+                >80kW</span
+              >
+              <span
+                class="bg-yellow-100/25 text-green-300 font-semibold dark:text-yellow-200 p-1 px-2 rounded-full"
+                >Consumo médio</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center bg-oasis-100 dark:bg-dark-200 p-2 rounded-lg shadow-md"
+            >
+              <span class="font-bold text-green-300 dark:text-oasis-100"
+                >Impressora</span
+              >
+              <span
+                class="bg-blue-100/25 text-blue-100 font-semibold p-1 px-2 rounded-full"
+                >72kW</span
+              >
+              <span
+                class="bg-yellow-100/25 text-green-300 font-semibold dark:text-yellow-200 p-1 px-2 rounded-full"
+                >Consumo médio</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center bg-oasis-100 dark:bg-dark-200 p-2 rounded-lg shadow-md"
+            >
+              <span class="font-bold text-green-300 dark:text-oasis-100"
+                >Roteador Wi-Fi</span
+              >
+              <span
+                class="bg-blue-100/25 text-blue-100 font-semibold p-1 px-2 rounded-full"
+                >24kW</span
+              >
+              <span
+                class="bg-green-100/25 text-green-300 font-semibold dark:text-green-100 p-1 px-2 rounded-full"
+                >Consumo baixo</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center bg-oasis-100 dark:bg-dark-200 p-2 rounded-lg shadow-md"
+            >
+              <span class="font-bold text-green-300 dark:text-oasis-100"
+                >Câmera de Seg.</span
+              >
+              <span
+                class="bg-blue-100/25 text-blue-100 font-semibold p-1 px-2 rounded-full"
+                >24kW</span
+              >
+              <span
+                class="bg-green-100/25 text-green-300 font-semibold dark:text-green-100 p-1 px-2 rounded-full"
+                >Consumo baixo</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col w-full h-full">
+        <div class="flex flex-wrap lg:flex-nowrap gap-4">
+            <div class="bg-white dark:bg-dark-100 rounded-xl w-full lg:w-1/2 p-4 mt-4 shadow-md">
+                <canvas id="chartPie"></canvas>
+            </div>
+            <div class="bg-white dark:bg-dark-100 rounded-xl w-full lg:w-1/2 p-4 shadow-md">
+                <h2 class="text-xl sm:text-2xl mb-4 font-bold text-green-200 dark:text-green-100 select-none">
+                    Notificações
+                </h2>
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-3">
+                        <!-- Alerta -->
+                        <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
+                            <div class="flex gap-2">
+                                <span class="text-red-100">Risco de superaquecimento detectado na unidade: <b>Produção/Operacional</b></span>
+                            </div>
+                            <span class="bg-red-100/25 text-sm text-red-100 px-2 rounded-lg ml-4">Alerta</span>
+                        </div>
+                    
+                        <!-- Sugestão -->
+                        <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
+                            <div class="flex gap-2">
+                                <span class="text-yellow-100">Implementações de metas de economia nos setores: <b>Escritório & Segurança e Monitoramento</b></span>
+                            </div>
+                            <span class="bg-yellow-100/25 text-sm text-yellow-100 px-2 rounded-lg ml-4">Sugestão</span>
+                        </div>
+                    
+                        <!-- Relatório -->
+                        <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
+                            <div class="flex gap-2">
+                                <span class="text-green-100">Eficiência energética aumentou em 15% no setor: <b>Produção</b></span>
+                            </div>
+                            <span class="bg-green-100/25 text-sm text-green-100 px-2 rounded-lg ml-4">Relatório</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
+                            <div class="flex gap-2">
+                                <span class="text-green-100">Eficiência energética aumentou em 40% no setor: <b>TI e Infraestrutura</b></span>
+                            </div>
+                            <span class="bg-green-100/25 text-sm text-green-100 px-2 rounded-lg ml-4">Relatório</span>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
-    </aside>
-</body>
+        <div class="flex flex-wrap lg:flex-nowrap gap-4">
+            <div class="bg-white dark:bg-dark-100 rounded-xl w-full lg:w-1/2 p-4 mt-4 shadow-md">
+                <canvas id="chartBar"></canvas>
+            </div>
+            <div class="bg-white dark:bg-dark-100 rounded-xl w-full lg:w-1/2 p-4  shadow-md">
+                <canvas id="chartLine"></canvas>
+            </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

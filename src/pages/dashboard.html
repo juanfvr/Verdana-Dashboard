@@ -328,60 +328,53 @@
           </div>
         </div>
       </section>
-      <section class="flex flex-col w-full xl:w-fit h-fit sm:h-full">
-        <div class="flex flex-wrap xl:flex-nowrap gap-4">
-            <div class="flex justify-center xl:block bg-white dark:bg-dark-100 rounded-xl w-full xl:w-1/2 p-4 mt-4 shadow-md">
-                <canvas id="chartPie"></canvas>
-            </div>
-            <div class="bg-white dark:bg-dark-100 rounded-xl w-full xl:w-1/2 p-4 lg:mt-4 shadow-md">
-                <h2 class="text-xl sm:text-2xl mb-4 font-bold text-green-200 dark:text-green-100 select-none">
-                    Notificações
-                </h2>
-                <div class="flex flex-col gap-2">
-                    <div class="flex flex-col gap-3">
-                        <!-- Alerta -->
-                        <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
-                            <div class="flex gap-2">
-                                <span class="text-red-100">Risco de superaquecimento detectado na unidade: <b>Produção/Operacional</b></span>
-                            </div>
-                            <span class="bg-red-100/25 text-sm text-red-100 px-2 rounded-lg ml-4">Alerta</span>
-                        </div>
-                    
-                        <!-- Sugestão -->
-                        <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
-                            <div class="flex gap-2">
-                                <span class="text-yellow-100">Implementações de metas de economia nos setores: <b>Escritório & Segurança e Monitoramento</b></span>
-                            </div>
-                            <span class="bg-yellow-100/25 text-sm text-yellow-100 px-2 rounded-lg ml-4">Sugestão</span>
-                        </div>
-                    
-                        <!-- Relatório -->
-                        <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
-                            <div class="flex gap-2">
-                                <span class="text-green-100">Eficiência energética aumentou em 15% no setor: <b>Produção</b></span>
-                            </div>
-                            <span class="bg-green-100/25 text-sm text-green-100 px-2 rounded-lg ml-4">Relatório</span>
-                        </div>
-                        <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
-                            <div class="flex gap-2">
-                                <span class="text-green-100">Eficiência energética aumentou em 40% no setor: <b>TI e Infraestrutura</b></span>
-                            </div>
-                            <span class="bg-green-100/25 text-sm text-green-100 px-2 rounded-lg ml-4">Relatório</span>
-                        </div>
+      <section class="xl:grid grid-cols-2 grid-rows-2 gap-4 w-full h-fit sm:h-full p-4">
+        <!-- Gráfico de Pizza -->
+        <div class="flex justify-center items-center xl:block bg-white dark:bg-dark-100 rounded-xl p-4 shadow-md mt-4 xl:mt-0">
+            <canvas id="chartPie"></canvas>
+        </div>
+        
+        <!-- Notificações -->
+        <div class="flex justify-center flex-col xl:block overflow-scroll overflow-x-hidden bg-white dark:bg-dark-100 rounded-xl p-4 shadow-md xl:mt-0">
+            <h2 class="text-xl sm:text-2xl mb-4 font-bold text-green-200 dark:text-green-100 select-none">
+                Notificações
+            </h2>
+            <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-3">
+                    <!-- Alerta -->
+                    <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
+                        <span class="text-red-100">Risco de superaquecimento detectado na unidade: <b>Produção/Operacional</b></span>
+                        <span class="bg-red-100/25 text-sm text-red-100 px-2 rounded-lg">Alerta</span>
                     </div>
-                    
+                    <!-- Sugestão -->
+                    <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
+                        <span class="text-yellow-100">Implementações de metas de economia nos setores: <b>Escritório & Segurança e Monitoramento</b></span>
+                        <span class="bg-yellow-100/25 text-sm text-yellow-100 px-2 rounded-lg">Sugestão</span>
+                    </div>
+                    <!-- Relatórios -->
+                    <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
+                        <span class="text-green-100">Eficiência energética aumentou em 15% no setor: <b>Produção</b></span>
+                        <span class="bg-green-100/25 text-sm text-green-100 px-2 rounded-lg">Relatório</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-white dark:bg-dark-200 p-3 rounded-lg shadow-md">
+                        <span class="text-green-100">Eficiência energética aumentou em 40% no setor: <b>TI e Infraestrutura</b></span>
+                        <span class="bg-green-100/25 text-sm text-green-100 px-2 rounded-lg">Relatório</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="flex flex-wrap xl:flex-nowrap gap-4">
-            <div class="flex justify-center bg-white dark:bg-dark-100 rounded-xl w-full xl:flex-1 xl:h-64 p-4 mt-4 shadow-md">
-                <canvas id="chartBar"></canvas>
-            </div>
-            <div class="flex justify-center bg-white dark:bg-dark-100 rounded-xl w-full xl:flex-1  xl:h-64 p-4 mt-4 mb-8 xl:mb-0 lg:mt-4  shadow-md">
-                <canvas id="chartLine"></canvas>
-            </div>
+        
+        <!-- Gráfico de Barras -->
+        <div class="flex justify-center items-center bg-white dark:bg-dark-100 rounded-xl p-4 shadow-md mt-4 xl:mt-0">
+            <canvas id="chartBar"></canvas>
         </div>
-      </section>
+        
+        <!-- Gráfico de Linhas -->
+        <div class="flex justify-center items-center bg-white dark:bg-dark-100 rounded-xl p-4 shadow-md mt-4 xl:mt-0">
+            <canvas id="chartLine"></canvas>
+        </div>
+    </section>
+    
     </main>
   </body>
 </html>

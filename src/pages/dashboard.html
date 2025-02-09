@@ -15,9 +15,9 @@
     <title>Verdana - Dashboar</title>
   </head>
   <body class="flex h-dvh bg-oasis-100 dark:bg-dark-200">
-    <header class="w-fit">
+    <header class="w-fit h-dvh">
       <aside
-        class="hidden md:flex flex-col justify-between h-dvh w-64 bg-white dark:bg-dark-100 p-4"
+        class="hidden xl:flex flex-col justify-between h-dvh w-64 bg-white dark:bg-dark-100 p-4"
       >
         <div class="text-oasis-100">
           <div class="select-none">
@@ -74,7 +74,7 @@
         </div>
       </aside>
       <nav
-        class="flex fixed z-20 w-full justify-between items-center bg-white dark:bg-dark-100 text-oasis-100 p-4"
+        class="flex xl:hidden fixed z-20 w-full justify-between items-center bg-white dark:bg-dark-100 text-oasis-100 p-4"
       >
         <div class="">
           <h1 class="text-3xl font-bold text-green-300 dark:text-green-100">
@@ -96,7 +96,7 @@
       </nav>
       <div
         id="navbar-hamburger"
-        class="hidden lg:hidden z-10 fixed flex-col bg-white dark:bg-dark-100 text-oasis-100 top-18 w-full"
+        class="hidden xl:hidden z-10 fixed flex-col bg-white dark:bg-dark-100 text-oasis-100 top-18 w-full"
       >
         <div class="flex flex-col gap-4 p-4 text-center text-xl">
           <div class="border-b-2 border-dark-200/50 text-green-200 dark:text-oasis-100">
@@ -120,10 +120,10 @@
         </div>
       </div>
     </header>
-    <main class="flex flex-col m-4 md:flex-row md:gap-4 my-16 md:my-0 w-full">
-      <section class="flex flex-col w-full md:w-fit h-fit sm:h-full">
+    <main class="flex flex-col m-4 xl:flex-row md:gap-4 my-16 md:my-0 w-full">
+      <section class="flex flex-col w-full xl:w-fit h-fit sm:h-full">
         <div
-          class="bg-white dark:bg-dark-100 rounded-xl shadow-md md:w-96 h-fit p-4 mt-4"
+          class="bg-white dark:bg-dark-100 rounded-xl shadow-md xl:w-96 h-fit p-4 mt-6 sm:mt-24 lg:mt-4"
         >
           <form>
             <div class="flex flex-col gap-2">
@@ -170,7 +170,7 @@
           </form>
         </div>
         <div
-          class="bg-white dark:bg-dark-100 rounded-xl shadow-md lg:w-96 h-96 lg:h-fit overflow-scroll overflow-x-auto mt-4 lg:my-3"
+          class="bg-white dark:bg-dark-100 rounded-xl shadow-md xl:w-96 h-96 lg:h-fit overflow-scroll overflow-x-auto mt-4 xl:my-4"
         >
           <div
             class="sticky z-10 top-0 rounded-xl bg-white dark:bg-dark-100 p-4 rounded-b-md"
@@ -328,12 +328,12 @@
           </div>
         </div>
       </section>
-      <section class="flex flex-col w-full h-full">
-        <div class="flex flex-wrap lg:flex-nowrap gap-4">
-            <div class="bg-white dark:bg-dark-100 rounded-xl w-full lg:w-1/2 p-4 mt-4 shadow-md">
+      <section class="flex flex-col w-full xl:w-fit h-fit sm:h-full">
+        <div class="flex flex-wrap xl:flex-nowrap gap-4">
+            <div class="flex justify-center xl:block bg-white dark:bg-dark-100 rounded-xl w-full xl:w-1/2 p-4 mt-4 shadow-md">
                 <canvas id="chartPie"></canvas>
             </div>
-            <div class="bg-white dark:bg-dark-100 rounded-xl w-full lg:w-1/2 p-4 lg:mt-4 shadow-md">
+            <div class="bg-white dark:bg-dark-100 rounded-xl w-full xl:w-1/2 p-4 lg:mt-4 shadow-md">
                 <h2 class="text-xl sm:text-2xl mb-4 font-bold text-green-200 dark:text-green-100 select-none">
                     Notificações
                 </h2>
@@ -373,11 +373,11 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-wrap lg:flex-nowrap gap-4">
-            <div class="bg-white dark:bg-dark-100 rounded-xl w-full lg:w-1/2 lg:h-64 p-4 mt-4 shadow-md">
+        <div class="flex flex-wrap xl:flex-nowrap gap-4">
+            <div class="flex justify-center bg-white dark:bg-dark-100 rounded-xl w-full xl:flex-1 xl:h-64 p-4 mt-4 shadow-md">
                 <canvas id="chartBar"></canvas>
             </div>
-            <div class="bg-white dark:bg-dark-100 rounded-xl w-full lg:w-1/2 lg:h-64 p-4 lg:mt-4  shadow-md">
+            <div class="flex justify-center bg-white dark:bg-dark-100 rounded-xl w-full xl:flex-1  xl:h-64 p-4 mt-4 mb-8 xl:mb-0 lg:mt-4  shadow-md">
                 <canvas id="chartLine"></canvas>
             </div>
         </div>

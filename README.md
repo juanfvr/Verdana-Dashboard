@@ -1,12 +1,10 @@
 # 🧑‍💻 Projeto Front-end | Verdana: Dashboard de Consumo Energético
 [Projeto hospedado](https://verdanasolutions.netlify.app/)
 
-<span>![homepage](https://github.com/user-attachments/assets/567c93ac-52a1-4223-9c94-d6ff699fa025)</span>
-<span>![dashboard](https://github.com/user-attachments/assets/087ae2e0-4ab2-4b1d-b1b5-bb2952322f19)</span>
-<span>![loginpage](https://github.com/user-attachments/assets/09335fd0-7710-4437-b8ac-0e776de4d914)</span>
-
-
-
+<div align="center" 
+ <img src="https://github.com/user-attachments/assets/087ae2e0-4ab2-4b1d-b1b5-bb2952322f19">
+ <img src="https://github.com/user-attachments/assets/567c93ac-52a1-4223-9c94-d6ff699fa025">
+</div>
 
 
 ## Visão geral: 
